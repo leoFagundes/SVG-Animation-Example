@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a;
+}
+
+svg {
+  overflow: visible;
+}
+
+#react-logo {
+  animation: logo-stroke-animation 5s ease-in-out infinite alternate;
+}
+
+@keyframes logo-stroke-animation {
+  0% {
+    fill-opacity: 0;
+    stroke-dasharray: 1 1000;
+    stroke-dashoffset: 100;
+    stroke-width: 0;
+    filter: drop-shadow(0 0 0 black);
+  }
+  70% {
+    fill-opacity: 0;
+    stroke-dasharray: 150 0;
+    stroke-dashoffset: 0;
+    stroke-width: 3;
+    filter: drop-shadow(0 0 0 black);
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dasharray: 150 0;
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+    filter: drop-shadow(0 0 10px rgba(1, 166, 107, 0.3));
+  }
+}
